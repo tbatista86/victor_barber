@@ -135,12 +135,12 @@ class SingUp extends StatelessWidget {
               color: Colors.white,
               // color: Color(0xFFF3D657),
             ),
-            Icon(
-              FontAwesome.apple,
-              size: 32,
-              color: Colors.white,
-              // color: Color(0xFFF3D657),
-            ),
+            // Icon(
+            //   FontAwesome.apple,
+            //   size: 32,
+            //   color: Colors.white,
+            //   // color: Color(0xFFF3D657),
+            // ),
           ],
         ),
       ],
