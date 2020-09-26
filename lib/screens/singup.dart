@@ -12,16 +12,19 @@ class SingUp extends StatelessWidget {
           'Inscreva-se',
           style: TextStyle(
             fontSize: 16,
-            color: Color(0xFFF3D657),
+            // color: Color(0xFFF3D657),
+            color: Colors.white,
             height: 2,
           ),
         ),
         Text(
-          'VICTOR APP BARBER',
+          'VICTOR BARBER APP',
           style: TextStyle(
             fontSize: 26,
             fontWeight: FontWeight.bold,
-            color: Color(0xFFF3D657),
+            // color: Color(0xFFF3D657),
+            color: Colors.white,
+
             height: 1,
             letterSpacing: 2,
           ),
@@ -36,7 +39,8 @@ class SingUp extends StatelessWidget {
             hintText: "Email",
             hintStyle: TextStyle(
               fontSize: 16,
-              color: Color(0xFF3F3C31),
+              // color: Color(0xFF3F3C31),
+              color: Colors.grey,
               fontWeight: FontWeight.bold,
             ),
             border: OutlineInputBorder(
@@ -61,7 +65,8 @@ class SingUp extends StatelessWidget {
             hintText: "Senha",
             hintStyle: TextStyle(
               fontSize: 16,
-              color: Color(0xFF3F3C31),
+              // color: Color(0xFF3F3C31),
+              color: Colors.grey,
               fontWeight: FontWeight.bold,
             ),
             border: OutlineInputBorder(
@@ -80,7 +85,8 @@ class SingUp extends StatelessWidget {
         Container(
           height: 40,
           decoration: BoxDecoration(
-            color: Color(0xFFF3D657),
+            // color: Color(0xFFF3D657),
+            color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(25)),
             boxShadow: [
               BoxShadow(
@@ -93,22 +99,23 @@ class SingUp extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              'Inscreva-se',
+              'Cadastrar',
               style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1C1C1C),
-              ),
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  // color: Color(0xFF1C1C1C),
+                  color: Colors.grey[700]),
             ),
           ),
         ),
         SizedBox(height: 24),
         Text(
-          'Ou instrava-se com',
+          'Ou cadastre-se com',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 16,
-            color: Color(0xFFF3D657),
+            color: Colors.white,
+            // color: Color(0xFFF3D657),
             height: 1,
           ),
         ),
@@ -119,17 +126,20 @@ class SingUp extends StatelessWidget {
             Icon(
               FontAwesome.facebook_official,
               size: 32,
-              color: Color(0xFFF3D657),
+              color: Colors.white,
+              // color: Color(0xFFF3D657),
             ),
             Icon(
               FontAwesome.google,
               size: 32,
-              color: Color(0xFFF3D657),
+              color: Colors.white,
+              // color: Color(0xFFF3D657),
             ),
             Icon(
               FontAwesome.apple,
               size: 32,
-              color: Color(0xFFF3D657),
+              color: Colors.white,
+              // color: Color(0xFFF3D657),
             ),
           ],
         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './login.dart';
-import './login_option.dart';
-import './singup.dart';
-import './singup_option.dart';
+import 'screens/login.dart';
+import 'widget/login_option.dart';
+import 'screens/singup.dart';
+import 'widget/singup_option.dart';
 
 void main() {
   runApp(MyApp());
@@ -106,7 +106,8 @@ class CurvePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Color(0xFFF3D657);
+    // paint.color = Color(0xFFF3D657);
+    paint.color = Colors.white;
     paint.style = PaintingStyle.fill;
 
     Path path = Path();

@@ -7,29 +7,12 @@ class Login extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        SizedBox(height: 10),
         Image.asset(
           'assets/images/vc.png',
           height: 200,
           width: 2000,
         ),
-        // Text(
-        //   'VICTOR APP BARBER',
-        //   style: TextStyle(
-        //     fontSize: 26,
-        //     color: Color(0xFF1C1C1C),
-        //     height: 1,
-        //     fontWeight: FontWeight.bold,
-        //     letterSpacing: 2,
-        //   ),
-        // ),
-        // Text(
-        //   'Faça seu login para continuar ',
-        //   style: TextStyle(
-        //     fontSize: 16,
-        //     color: Color(0xFF1C1C1C),
-        //     height: 2,
-        //   ),
-        // ),
         SizedBox(height: 16),
         TextField(
           keyboardType: TextInputType.emailAddress,
@@ -41,7 +24,8 @@ class Login extends StatelessWidget {
             hintText: "Email",
             hintStyle: TextStyle(
               fontSize: 16,
-              color: Color(0xFFD9BC43),
+              // color: Color(0xFFD9BC43),
+              color: Colors.grey,
               fontWeight: FontWeight.bold,
               decoration: TextDecoration.none,
             ),
@@ -53,7 +37,8 @@ class Login extends StatelessWidget {
               ),
             ),
             filled: true,
-            fillColor: Color(0xFFECCB45),
+            // fillColor: Color(0xFFECCB45),
+            fillColor: Colors.grey[200],
             contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
           ),
         ),
@@ -68,7 +53,8 @@ class Login extends StatelessWidget {
             hintText: "Senha",
             hintStyle: TextStyle(
               fontSize: 16,
-              color: Color(0xFFD9BC43),
+              // color: Color(0xFFD9BC43),
+              color: Colors.grey,
               fontWeight: FontWeight.bold,
             ),
             border: OutlineInputBorder(
@@ -79,7 +65,9 @@ class Login extends StatelessWidget {
               ),
             ),
             filled: true,
-            fillColor: Color(0xFFECCB45),
+            // fillColor: Color(0xFFECCB45),
+            fillColor: Colors.grey[300],
+
             contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
             labelStyle: new TextStyle(color: Colors.grey),
           ),
@@ -105,7 +93,8 @@ class Login extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFF3D657),
+                // color: Color(0xFFF3D657),
+                color: Colors.white,
               ),
             ),
           ),
