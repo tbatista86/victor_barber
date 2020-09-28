@@ -24,7 +24,7 @@ class LoginOption extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFF1C1C1C).withOpacity(0.2),
+                color: Colors.grey.withOpacity(0.2),
                 spreadRadius: 3,
                 blurRadius: 4,
                 offset: Offset(0, 3),

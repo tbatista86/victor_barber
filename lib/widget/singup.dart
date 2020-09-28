@@ -97,7 +97,6 @@ class _SingUpState extends State<SingUp> {
               hintText: "Senha",
               hintStyle: TextStyle(
                 fontSize: 16,
-                // color: Color(0xFF3F3C31),
                 color: Colors.grey,
                 fontWeight: FontWeight.bold,
               ),
@@ -121,7 +120,7 @@ class _SingUpState extends State<SingUp> {
               borderRadius: BorderRadius.all(Radius.circular(25)),
               boxShadow: [
                 BoxShadow(
-                  color: Color(0xFFF3D657).withOpacity(0.2),
+                  color: Colors.grey.withOpacity(0.2),
                   spreadRadius: 3,
                   blurRadius: 4,
                   offset: Offset(0, 3),
@@ -143,7 +142,6 @@ class _SingUpState extends State<SingUp> {
                   style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      // color: Color(0xFF1C1C1C),
                       color: Colors.grey[700]),
                 ),
               ),

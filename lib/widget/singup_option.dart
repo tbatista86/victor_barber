@@ -14,7 +14,6 @@ class SingupOptions extends StatelessWidget {
             fontSize: 24,
             fontWeight: FontWeight.bold,
             height: 1,
-            // color: Color(0xFFF3D657),
             color: Colors.white,
           ),
         ),
@@ -22,12 +21,11 @@ class SingupOptions extends StatelessWidget {
         Container(
           height: 40,
           decoration: BoxDecoration(
-            // color: Color(0xFFF3D657),
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(25)),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFFF3D657).withOpacity(0.2),
+                color: Color(0xFF1C1C1C).withOpacity(0.2),
                 spreadRadius: 3,
                 blurRadius: 4,
                 offset: Offset(0, 3),
@@ -40,7 +38,6 @@ class SingupOptions extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                // color: Color(0xFF1C1C1C),
                 color: Colors.grey[700],
               ),
             ),

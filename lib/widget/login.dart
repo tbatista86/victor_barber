@@ -9,6 +9,7 @@ class _LoginState extends State<Login> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String _email;
   String _password;
+  bool loading = false;
 
   String validateEmail(value) {
     if (value.isEmpty) {
@@ -111,6 +112,9 @@ class _LoginState extends State<Login> {
                 return;
               }
               _formKey.currentState.save();
+              setState(() {
+                loading = true;
+              });
               print(_email);
               print(_password);
             },
@@ -121,7 +125,7 @@ class _LoginState extends State<Login> {
                 borderRadius: BorderRadius.all(Radius.circular(25)),
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xFF1C1C1C).withOpacity(0.2),
+                    color: Colors.grey.withOpacity(0.2),
                     spreadRadius: 3,
                     blurRadius: 4,
                     offset: Offset(0, 3),
@@ -129,14 +133,16 @@ class _LoginState extends State<Login> {
                 ],
               ),
               child: Center(
-                child: Text(
-                  'Entrar',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
+                child: loading
+                    ? Center(child: CircularProgressIndicator())
+                    : Text(
+                        'Entrar',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
               ),
             ),
           ),
