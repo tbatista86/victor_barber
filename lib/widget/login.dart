@@ -12,7 +12,7 @@ class _LoginState extends State<Login> {
 
   String validateEmail(value) {
     if (value.isEmpty) {
-      return "Entro com um e-mail!";
+      return "Por favor entre um e-mail!";
     } else if (!value.contains("@")) {
       return 'Entre com um e-mail válido!';
     } else if (!value.contains(".com")) {
@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
 
   String validatePass(value) {
     if (value.isEmpty) {
-      return "Entre com a senha!";
+      return "Por favor entre com a senha!";
     } else if (value.length < 8) {
       return "A senha deve conter no mínimo 8 caracteres!";
     }

@@ -14,7 +14,7 @@ class _SingUpState extends State<SingUp> {
 
   String validatorEmail(value) {
     if (value.isEmpty) {
-      return "Entro com um e-mail!";
+      return "Por favor entre com um e-mail!";
     } else if (!value.contains("@")) {
       return 'Entre com um e-mail válido!';
     } else if (!value.contains(".com")) {
@@ -25,7 +25,7 @@ class _SingUpState extends State<SingUp> {
 
   String validatePass(value) {
     if (value.isEmpty) {
-      return "Entre com a senha!";
+      return "Por favor entre com a senha!";
     } else if (value.length < 8) {
       return "A senha deve conter no mínimo 8 caracteres!";
     }
