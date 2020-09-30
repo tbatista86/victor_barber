@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../helpers/db_helper.dart';
 
 class AuthScreen extends StatelessWidget {
   bool checkLoggedIn() {

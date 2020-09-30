@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "55057329790",
+    "firebase_url": "https://victor-barber.firebaseio.com",
+    "project_id": "victor-barber",
+    "storage_bucket": "victor-barber.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55057329790:android:4eb03f007425c3a7e8722f",
+        "android_client_info": {
+          "package_name": "com.example.victor_barber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55057329790-mls1c4uah30efpe7knngsm35morkjk9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKOjNc5itpXg_DAmS7i-P3oCx5gD_hwBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55057329790-mls1c4uah30efpe7knngsm35morkjk9v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

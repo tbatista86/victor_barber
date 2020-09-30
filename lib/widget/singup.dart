@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 
 class SingUp extends StatefulWidget {
   @override
@@ -8,6 +10,9 @@ class SingUp extends StatefulWidget {
 
 class _SingUpState extends State<SingUp> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  final emailTextController = TextEditingController();
+  final passwordTextController = TextEditingController();
 
   String _email;
   String _password;
@@ -61,6 +66,7 @@ class _SingUpState extends State<SingUp> {
           SizedBox(height: 16),
           TextFormField(
             validator: validatorEmail,
+            controller: emailTextController,
             onSaved: (value) => _email = value,
             style: TextStyle(
               decoration: TextDecoration.none,
@@ -88,6 +94,7 @@ class _SingUpState extends State<SingUp> {
           SizedBox(height: 16),
           TextFormField(
             validator: validatePass,
+            controller: passwordTextController,
             onSaved: (value) => _password = value,
             obscureText: true,
             style: TextStyle(
@@ -135,6 +142,7 @@ class _SingUpState extends State<SingUp> {
                 _formKey.currentState.save();
                 print(_email);
                 print(_password);
+                signUpWithEmail(_email, _password, context);
               },
               child: Center(
                 child: Text(
@@ -161,10 +169,15 @@ class _SingUpState extends State<SingUp> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(
-                FontAwesome.facebook_official,
-                size: 32,
-                color: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  signUpWithFacebool();
+                },
+                child: Icon(
+                  FontAwesome.facebook_official,
+                  size: 32,
+                  color: Colors.white,
+                ),
               ),
               Icon(
                 FontAwesome.google,
@@ -180,6 +193,33 @@ class _SingUpState extends State<SingUp> {
           ),
         ],
       ),
+    );
+  }
+}
+
+Future<void> signUpWithFacebool() async {}
+
+Future<void> signUpWithEmail(email, password, ctx) async {
+  try {
+    await FirebaseAuth.instance
+        .createUserWithEmailAndPassword(email: email, password: password);
+    showDialog(
+      context: ctx,
+      builder: (context) {
+        return AlertDialog(
+          content: Text('Cadastro realizado com sucesso!'),
+        );
+      },
+    );
+  } catch (e) {
+    print(e.message);
+    showDialog(
+      context: ctx,
+      builder: (context) {
+        return AlertDialog(
+          content: Text(e.message),
+        );
+      },
     );
   }
 }
