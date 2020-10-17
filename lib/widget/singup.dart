@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class SingUp extends StatefulWidget {
   @override
@@ -171,7 +171,7 @@ class _SingUpState extends State<SingUp> {
             children: [
               GestureDetector(
                 onTap: () {
-                  signUpWithFacebool();
+                  signUpWithFacebook();
                 },
                 child: Icon(
                   FontAwesome.facebook_official,
@@ -179,10 +179,15 @@ class _SingUpState extends State<SingUp> {
                   color: Colors.white,
                 ),
               ),
-              Icon(
-                FontAwesome.google,
-                size: 32,
-                color: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  signupWithGoogle();
+                },
+                child: Icon(
+                  FontAwesome.google,
+                  size: 32,
+                  color: Colors.white,
+                ),
               ),
               // Icon(
               //   FontAwesome.apple,
@@ -197,7 +202,9 @@ class _SingUpState extends State<SingUp> {
   }
 }
 
-Future<void> signUpWithFacebool() async {}
+Future<void> signupWithGoogle() async {}
+
+Future<void> signUpWithFacebook() async {}
 
 Future<void> signUpWithEmail(email, password, ctx) async {
   try {
